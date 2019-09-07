@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    //This defines what REMs is
+    font-size: 62.5% ;/* 1 rem = 10px - 10/16 = 0.625  -- To set the font-size by the value we want to*/
+    @include responsive(tab-land){ // if width < 1200
+        font-size: 56.25%;/* 1 rem = 9px - 9/16 = 0.5625*/
+    }
+    @include responsive(tab-port){ // if width < 900
+        font-size: 50%;/* 1 rem = 8px - 8/16 = 0.5*/
+    }
+    @include responsive(phone){ // if width < 600
+        font-size: 43.75%;/* 1 rem = 7px - 7/16 = 0.4375*/
+    }
+    @include responsive(big-desktop){
+        font-size: 75%;/* 1 rem = 12px - 12/16 = 0.5*/
+        background: yellow;
+    }
+    scroll-behavior: smooth;
+}
+body{
+  box-sizing: border-box;
+  padding: 3rem;
+  @include responsive(tab-port){ // if width < 900
+    padding: 0;
+    }
+    height: 100vh;
+    width: 100vw;
+}
+::selection{
+    background: $color-primary;
+    color: $color-white;
+}

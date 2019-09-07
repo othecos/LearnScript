@@ -1,0 +1,77 @@
+@mixin clearFix {
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+  
+}
+@mixin gradientGreenHeading{
+    display:inline-block;
+    background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin absCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+//Media query manager
+
+/*
+0-600px Phone
+600-900px Tablet Portrait
+900-1200px Tablet LandScape
+1200-1800px Desktop ( Normal styles apply)
+1800px Big Desktop
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Order: base + typography > general layout + grid >  page layout > components
+
+
+The right thing to do is to use EM instead of pixel units,
+1em = 16px
+
+*/
+
+@mixin responsive($breakpoint){
+    @if $breakpoint == phone {
+        //600px/16px = 37.5em
+        @media only screen and (max-width: 37.5em) {@content; }
+    }
+    @else if $breakpoint == tab-port{
+        //900/16px = 56.25em
+        @media only screen and (max-width: 56.25em) {@content; }
+    }
+    @else if $breakpoint == tab-land{
+        //1200/16px = 75em
+        @media only screen and (max-width: 75em) {@content; }
+    }
+    @else if $breakpoint == big-desktop{
+        //1800/16px = 112.5em
+        @media only screen and (min-width: 112.5em) {@content; }        
+    }
+}
+// @mixin responsive-tablet-portrait(){
+//     @media (max-width: 900px) {
+//         @content;
+//     }
+// }
+// @mixin responsive-tablet-landscape(){
+//     @media (max-width: 1200px) {
+//         @content;
+//     }
+// }
+// @mixin responsive-big-desktop(){
+//     @media (min-width: 1800px) {
+//         @content;
+//     }
+// }

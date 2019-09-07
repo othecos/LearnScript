@@ -1,0 +1,3 @@
+@function calculateWidth($a,$b){
+    @return (100% - $a )/$b;
+}
