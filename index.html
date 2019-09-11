@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn Javascript</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <img src="https://img.icons8.com/color/50/000000/javascript.png" alt="Javascript Logo">
+        <ul class="nav__tabs">
+            <li onclick='onSelectedTab("tab-home","home")' id="tab-home" class="nav__tab active">Home</li>
+            <li onclick='onSelectedTab("tab-game", "game")' id="tab-game" class="nav__tab">Game</li>
+            <li onclick='onSelectedTab("tab-learn", "learn")' id="tab-learn" class="nav__tab">Learn</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="section" id="home">
+
+        </div>
+        <div class="section" id="game">
+          <div class="card-container">
+            <div class="inner-container">          
+                <div class="card inactive-1"></div>
+                <div class="card inactive-2"></div>
+                <div class="card">
+                    <div class="card-content card__active">
+                        <h1>Step 1</h1>
+                        <p>Make perfectly hot homemade coffee. Carefully pour into coffee cup. <i class="em em-coffee"></i></p>
+                        <a class="button" href="javascript:void(0)">Next step &rarr;</a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Step 2</h1>
+                        <p>Trip. Spill all over the place.</p>
+                        <a class="button" href="javascript:void(0)">Next step &rarr;</a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Step 3</h1>
+                        <p>Repeat.</p>
+                        <a class="button" href="javascript:void(0)">Next step &rarr;</a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Step 4</h1>
+                        <p>Repeat.</p>
+                        <a class="button" href="javascript:void(0)">Next step &rarr;</a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Step 5</h1>
+                        <p>Repeat.</p>
+                        <a class="button" href="javascript:void(0)">Next step &rarr;</a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Step 6</h1>
+                        <p>Repeat.</p>
+                        <a class="button" href="javascript:void(0)">Next step &rarr;</a>
+                    </div>
+                    <div class="card-content">
+                        <h1>Step 7</h1>
+                        <p>Repeat.</p>
+                        <a class="button" href="javascript:void(0)">Next step &rarr;</a>
+                    </div>
+                    <div class="progress-container">
+                        <div class="step"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="section" id="learn">
+
+        </div>
+
+    </div>
+    <script src="js/quiz.js"></script>
+    <!-- <script src="js/question.js"></script> -->
+    <!-- <script src="js/app.js"></script> -->
+</body>
+
+</html>

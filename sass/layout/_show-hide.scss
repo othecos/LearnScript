@@ -1,0 +1,29 @@
+
+$breakpoints-keys: map-keys($screen-breakpoints);
+$breakpoints-values: map-values($screen-breakpoints);
+@for $i from 1 to length($breakpoints-keys)+1 {
+  @if $i < length($breakpoints-keys) {
+    /*
+        Hide between current and next break point
+            Example: 
+        class="hidden-xs" -> Hide between xs (0px) and sm (576px)
+        class="hidden-sm" -> Hide between sm (576px) and md (768px)
+    */
+    .hidden-#{nth($breakpoints-keys, $i)} {
+      @media (min-width: nth($breakpoints-values, $i)) and (max-width: calc(#{nth($breakpoints-values, $i+1)} - 1px ) ) {
+        display: none;
+      }
+    }
+  } @else {
+    /*
+        Hide last breakpoint to infinite
+            Example: 
+        class="hidden-xl" -> Hide from xl(1200px) to infinite (∞)
+        */
+        .hidden-#{nth($breakpoints-keys, $i)} {
+      @media (min-width: nth($breakpoints-values, $i)) {
+        display: none;
+      }
+    }
+  }
+}
