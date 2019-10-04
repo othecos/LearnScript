@@ -31,13 +31,15 @@
                     <form>
                         <div class="email">
                             <p class="small-text">Email: </p>
-                            <input type="email" class="form-control" name="email" id="email-box">
+                            <input onkeypress="javascript:validateForm(this)" type="email" class="form-control" id="email-box">
+                            <!-- <p class="small-text valid">OK!</p>
+                            <p class="small-text invalid">NOT OK :(</p> -->
                         </div>
                         <div class="password">
                             <p class="small-text">Password: </p>
-                            <input type="password" class="form-control" name="password" id="password-box">
+                            <input type="password" class="form-control" id="password-box">
                         </div>
-                        <button class="button-login" onclick="javascript:loginUser()" type="submit">LOGIN</button>
+                        <button class="button-login" onclick="javascript:loginUser()">LOGIN</button>
                     </form>
                 </div>
             </div>
@@ -91,11 +93,33 @@
         </div>
         </div>
         <div class="section" id="learn">
-
+            <div class="about">
+                <div class="about-game">
+                    <div class="icon-js">
+                        <img src="./images/js-icon.jpg" alt="icon">
+                    </div>
+                    <div class="card-about">
+                        <div>
+                            <p>Este Game tem como objetivo promover conhecimento de uma das linguagens de programação mais utilizadas hoje</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <div class="card-about">
+                        <div>
+                            <p>Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.</p>
+                        </div>
+                    </div>
+                    <div class="icon-html">
+                        <img src="./images/html-css-icon.jpg" alt="icon">
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
     <script src="js/quiz.js"></script>
+    <script src="js/home.js"></script>
     <!-- <script src="js/question.js"></script> -->
     <!-- <script src="js/app.js"></script> -->
 </body>

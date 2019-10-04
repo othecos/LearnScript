@@ -109,3 +109,43 @@ nav {
   font-size: 1.6rem;
   font-family: "Roboto Medium"
 }
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.about-game {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.about-us {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.card-about {
+  width: 500px;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+  box-shadow: 0 43px 60px -40px black;
+  div {
+    text-align: left;
+    color: #6618cf;
+    font-size: 2.5rem;
+    font-family: "Roboto";
+    padding: 5rem;
+    font-weight: 800;
+  }
+}
