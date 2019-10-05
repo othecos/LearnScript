@@ -17,8 +17,8 @@
         <img src="https://img.icons8.com/color/50/000000/javascript.png" alt="Javascript Logo">
         <ul class="nav__tabs">
             <li onclick='onSelectedTab("tab-home","home")' id="tab-home" class="nav__tab active">Home</li>
-            <li onclick='onSelectedTab("tab-game", "game")' id="tab-game" class="nav__tab">Game</li>
-            <li onclick='onSelectedTab("tab-learn", "learn")' id="tab-learn" class="nav__tab">Learn</li>
+            <li onclick='onSelectedTab("tab-learn", "learn")' id="tab-learn" class="nav__tab" style="display: none">Learn</li>
+            <li onclick='onSelectedTab("tab-about", "about")' id="tab-about" class="nav__tab">About</li>
         </ul>
     </nav>
     <div class="container">
@@ -28,23 +28,23 @@
                     <div class="icon">
                         <img src="./images/icon2.png" alt="icon">
                     </div>
-                    <form>
-                        <div class="email">
+                    <form >
+                        <div class="email"> 
                             <p class="small-text">Email: </p>
-                            <input onkeypress="javascript:validateForm(this)" type="email" class="form-control" id="email-box">
-                            <!-- <p class="small-text valid">OK!</p>
-                            <p class="small-text invalid">NOT OK :(</p> -->
+                            <input required type="email" class="form-control" id="email-box">
+                            <p class="invalidMessageText">NOT OK :(</p>
                         </div>
                         <div class="password">
                             <p class="small-text">Password: </p>
-                            <input type="password" class="form-control" id="password-box">
+                            <input required type="password" class="form-control" id="password-box">
+                            <p class="invalidMessageText">NOT OK :(</p>
                         </div>
-                        <button class="button-login" onclick="javascript:loginUser()">LOGIN</button>
+                        <button class="button-login" onclick="validateLogin()">LOGIN</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="section" id="game">
+        <div class="section" id="learn">
           <div class="card-container">
             <div class="inner-container">          
                 <div class="card inactive-1"></div>
@@ -92,15 +92,15 @@
             </div>
         </div>
         </div>
-        <div class="section" id="learn">
+        <div class="section" id="about">
             <div class="about">
-                <div class="about-game">
+                <div class="about-learn">
                     <div class="icon-js">
                         <img src="./images/js-icon.jpg" alt="icon">
                     </div>
                     <div class="card-about">
                         <div>
-                            <p>Este Game tem como objetivo promover conhecimento de uma das linguagens de programação mais utilizadas hoje</p>
+                            <p>Este learn tem como objetivo promover conhecimento de uma das linguagens de programação mais utilizadas hoje</p>
                         </div>
                     </div>
                 </div>
@@ -123,5 +123,4 @@
     <!-- <script src="js/question.js"></script> -->
     <!-- <script src="js/app.js"></script> -->
 </body>
-
 </html>

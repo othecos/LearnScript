@@ -6,4 +6,3 @@ function onSelectedTab (tabID,sectionID){
     document.getElementById(tabID).classList.add('active');
     document.getElementById(sectionID).scrollIntoView({behavior: 'smooth'});
 }
-
